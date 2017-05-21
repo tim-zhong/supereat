@@ -1,0 +1,304 @@
+$color1: #000000;
+$border-radius: 2px;
+$orange: #FE5F55;
+$dark-orange: #ED4E44;
+$navy: #555967;
+$dark-navy: #333745;
+$dark-dark-navy: #222634;
+
+@mixin box-sizing(){
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+@mixin user-select(){
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;	
+	-o-user-select:none;
+	user-select:none;	
+}
+
+@mixin vertical-center(){
+	position: absolute;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin border-radius($radius){
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	-ms-border-radius:$radius;	
+	-o-border-radius:$radius;
+	border-radius:$radius;	
+}
+
+/*------------general------------*/
+body{
+	background: $dark-navy;
+	margin: 0;
+	position: relative;
+	height: 100%;
+}
+*{
+	font-family: sans-serif;
+}
+.cwidth{
+	width: 1200px;
+	margin:0 auto; /*center*/
+}
+.clear{
+	clear: both;
+}
+.button{
+	display: inline-block;
+	padding: 10px 15px;
+	font-weight: 300;
+	-webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	-moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	-ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+	color:#ffffff;
+	background: $orange;
+	-webkit-transition: background 250ms;
+	-moz-transition: background 250ms;
+	-o-transition: background 250ms;
+	transition: background 250ms;
+	@include user-select();
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-o-user-select:none;
+	user-select:none;
+}
+.button:hover{
+	cursor: pointer;
+	background: $dark-orange;
+}
+/*------------hearder------------*/
+#header{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+}
+#welcome-background{
+	-webkit-box-shadow: 0px 60px 80px rgba(0,0,0,0.5) inset;
+	-moz-box-shadow: 0px 60px 80px rgba(0,0,0,0.5) inset;
+	-ms-box-shadow: 0px 60px 80px rgba(0,0,0,0.5) inset;
+	box-shadow: 0px 60px 80px rgba(0,0,0,0.5) inset;
+	background: url(../assets/welcome-bg.jpg);
+	-webkit-background-position: center center;
+	-moz-background-position: center center;
+	-ms-background-position: center center;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	padding: 200px 0 250px 0;
+
+	h1{
+		-webkit-text-shadow:2px 2px rgba(0,0,0,0.5);
+		-moz-text-shadow:2px 2px rgba(0,0,0,0.5);
+		-ms-text-shadow:2px 2px rgba(0,0,0,0.5);
+		text-shadow:2px 2px rgba(0,0,0,0.5);
+		color:#ffffff;
+	}
+}
+#logo{
+	float: left;
+	display: inline-block;
+	padding: 20px 30px;
+	/*text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
+	cursor:pointer;
+}
+#logo img{
+
+	width: 100px;
+}
+.menuitem{
+	font-size: 18px;
+	float: right;
+	display: inline-block;
+	margin: 20px 20px;
+	padding: 8px 25px;
+	@include border-radius($border-radius);
+	/*text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
+	cursor:pointer;
+	border:1px solid $dark-orange;
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	-o-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+#search-bar-container{
+	text-align: center;
+	width:100%;
+	position: relative;
+	/*margin: 100px 200px;*/
+}
+#search-bar{
+	width:600px;
+	margin: 0 auto;
+	text-align: center;
+}
+#location, #search{
+	@include box-sizing();
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	font-size: 20px;
+	padding: 15px 35px;
+	border:1px solid $dark-orange;
+	-webkit-border-radius: $border-radius 0 0 $border-radius;
+	-moz-border-radius: $border-radius 0 0 $border-radius;
+	-o-border-radius: $border-radius 0 0 $border-radius;
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+#location{
+	padding: 15px 20px;
+}
+
+#search{
+	-webkit-border-radius: 0 $border-radius $border-radius 0;
+	-moz-border-radius: 0 $border-radius $border-radius 0;
+	-o-border-radius: 0 $border-radius $border-radius 0;
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+#search-keyword{
+	@include box-sizing();
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	outline: none;
+	font-size: 20px;
+	padding: 15px 20px;
+	border:1px solid $dark-orange;
+	position: relative;
+	margin:-1px -5px 0;
+	top:-1px;
+	margin:0 -5px;
+	width:68%;
+}
+
+
+/*----------- footer -------------*/
+
+#footer{
+	border-top:1px solid $dark-dark-navy;
+	color:#ffffff;
+	background: $dark-navy;
+	padding:40px 0;
+
+	.social-icon{
+		margin: 0 5px;
+	}
+	.social-icon:hover{
+		cursor: pointer;
+	}
+	ul{
+		padding-left:20px;
+	}
+}
+
+.footer-col{
+	@include box-sizing();
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	float:left;
+	width:33.3%;
+	padding: 20px;
+}
+
+.footer-col-inner{
+	border-top:2px solid $navy;
+}
+
+.footer-col-content{
+	font-weight: 300;
+	opacity: 0.4;
+}
+
+#location-preview{
+	height: 400px;
+	margin-bottom: 10px;
+}
+
+#location-preview-value{
+	display: none;
+}
+
+/*------------ model --------------*/
+.modal-container, .modal-container-show{
+	display: inline-block;
+	position:fixed;
+	width:100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	top:0;
+	left:0;
+	z-index:2;
+	visibility: hidden;
+
+	.modal{
+		top:10px;
+		opacity: 0;
+	}
+}
+
+.modal-container-show{
+	visibility: visible;
+
+	.modal{
+		top:0px;
+		opacity: 1;
+	}
+}
+
+.modal-inner-container{
+	text-align: center;
+	width: 100%;
+	@include vertical-center();
+}
+
+.modal{
+	position: relative;
+	@include box-sizing();
+	min-width: 300px;
+	width:50%;
+	margin:0 auto;
+	background: #ffffff;
+	@include border-radius($border-radius);
+	padding: 30px;
+	text-align: center;
+	-webkit-transition: all 400ms ease-out;
+	-moz-transition: all 400ms ease-out;
+	-ms-transition: all 400ms ease-out;
+	transition: all 400ms ease-out;
+}
+
+/*--------------- media query -----------*/
+@media only screen and (max-width: 1200px) {
+	.cwidth{
+		width:100%;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.cwidth{
+		width:100%;
+	}
+}

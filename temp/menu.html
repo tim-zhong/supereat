@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title></title>
+        
+        <style>
+            .clear{
+                clear:both;
+            }
+
+            .cwidth{
+                width:1100px;
+                margin:0 auto;
+                position:relative;
+            }
+
+            .mid-dot-seperator{
+                padding: 0 5px;
+            }
+            
+            body{
+                background: #f2f2f4;
+            }
+
+            #res-content{
+                background: #ffffff;
+                padding:60px 30px;
+            }
+
+            #res-content-title{
+                padding: 0 30px;
+            }
+
+            .res-card{
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                box-sizing: border-box;
+                padding:10px;
+                width:33.33%;
+                float: left;
+            }
+
+            .res-card-inner{
+                padding: 20px;
+                -webkit-transition: all 250ms;
+                -moz-transition: all 250ms;
+                -ms-transition: all 250ms;
+                transition: all 250ms;
+            }
+            
+            .res-card-inner:hover{
+                cursor: pointer;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+
+            .res-img{
+                background-image: url(http://placehold.it/400x250);
+                height:240px;
+                margin-bottom: 10px;
+                -webkit-background-position:center center;
+                -moz-background-position:center center;
+                -o-background-position:center center;
+                background-position:center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            .res-title{
+                margin-bottom: 10px;
+                line-height: 1;
+                font-weight: 600;
+                font-size:20px;
+            }
+            .res-info{
+                color:#939393;
+            }
+            .res-dist{
+                text-transform: uppercase;
+            }
+            #banner{
+                background-image: url(assets/fake-restaurant.jpg);
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -ms-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                -webkit-background-position: center center;
+                -moz-background-position: center center;
+                -ms-background-position: center center;
+                -o-background-position: center center;
+                background-position: center center;
+                padding: 32px;
+                height: 364px;
+            }
+            #banner-content{
+                background: #f2f2f4;
+                float: left;
+                padding: 24px;
+                height: 250px;
+            }
+            #banner-title{
+                height: 164px;
+                font-size: 36px;
+                line-height: 44px;
+            }
+            #menu{
+                
+            }
+            #menu-tool-bar, #menu-content{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                float: left;
+                padding: 20px;
+            }
+            #menu-tool-bar{
+                background: #FFFFFF;
+                margin-top:130px;
+                width: 33.3%;
+                padding-left:30px;
+            }
+            #time{
+                font-size: 16px;
+                font-family: sans-serif;
+                color: #C0C0C0;
+                line-height: 32px;
+                
+            }
+            .subsection{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            #menu-content{
+                margin-top:30px;
+                width: 66.6%;
+                padding-top: 0;   
+            }
+            #cat-title{
+                padding: 30px;
+                color: #494949;
+                height: 100px;
+                line-height: 1;
+                font-family: sans-serif;
+                font-size: 36px;
+                font-weight: 300;
+            }
+            .cat-item{
+                height:180px;
+                position: relative;
+                background: #FFFFFF;
+                margin-bottom: 10px;
+            }
+            .cat-item-content{
+                padding: 20px;
+                padding-right:200px;
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                font-size:16px;
+            }
+            .cat-item-thumb{
+                position: absolute;
+                top:0;
+                right:0;
+            }
+            .cat-item-title{
+                font-weight: 600;
+                font-size: 20px;
+            }
+            .cat-item-description{
+                color: #717171;
+                font-weight: 300;
+                font-size: 18px;
+            }
+            .cat-item-price{
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+            }
+            .cat-item-text-only .menu-item-content{
+                padding-right:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="banner">
+            <div class="cwidth">
+                <div id="banner-content">
+                    <div id="banner-title">
+                        Restaurant's Name    
+                    </div>
+                    <div class="res-info">
+                        <span class="res-price">$$$</span>
+                        <span class="mid-dot-seperator">&middot;</span>
+                        <span class="res-type">Pub</span>
+                    </div>                
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="menu" class="cwidth">
+            <div id="menu-tool-bar">
+                <div id="time">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    12:00AM - 12:00PM
+                </div>
+                <div class="subsection">Most Popular</div>
+                <div class="subsection">Appetizer</div>
+                <div class="subsection">category3</div>
+                <div class="subsection">category4</div>
+            </div>
+            <div id="menu-content">
+                <div class="menu-cat" id="most-popular">
+                    <div id="cat-title">
+                        Most Popular
+                    </div>
+                    <div class="cat-item">
+                        <div class="cat-item-content">
+                            <div class="cat-item-title">Lorem ipsum dolor sit amet</div>
+                            <div class="cat-item-description">consectetur adipiscing elit. Fusce augue nunc, laoreet a augue vel, placerat laoreet est. Morbi placerat dui nec nisl semper, sit amet rutrum mi imperdiet.</div>
+                            <div class="cat-item-price">$12.00</div>
+                        </div>
+                        <div class="cat-item-thumb"><img src="http://placehold.it/180x180"></div>
+                    </div>
+                    <div class="cat-item cat-item-text-only">
+                        <div class="cat-item-content">
+                            <div class="cat-item-title">Lorem ipsum dolor sit amet</div>
+                            <div class="cat-item-description">consectetur adipiscing elit. Fusce augue nunc, laoreet a augue vel, placerat laoreet est. Morbi placerat dui nec nisl semper, sit amet rutrum mi imperdiet.</div>
+                            <div class="cat-item-price">$12.00</div>
+                        </div>
+                    </div>
+                    <div class="cat-item">
+                        
+                    </div>
+                </div>
+
+                <div class="menu-cat" id="most-popular">
+                    <div id="cat-title">
+                        Appetizer
+                    </div>
+                    <div class="cat-item">
+                        <div class="cat-item-content">
+                            <div class="cat-item-title">Lorem ipsum dolor sit amet</div>
+                            <div class="cat-item-description">consectetur adipiscing elit. Fusce augue nunc, laoreet a augue vel, placerat laoreet est. Morbi placerat dui nec nisl semper, sit amet rutrum mi imperdiet.</div>
+                            <div class="cat-item-price">$12.00</div>
+                        </div>
+                        <div class="cat-item-thumb"><img src="http://placehold.it/180x180"></div>
+                    </div>
+                    <div class="cat-item cat-item-text-only">
+                        <div class="cat-item-content">
+                            <div class="cat-item-title">Lorem ipsum dolor sit amet</div>
+                            <div class="cat-item-description">consectetur adipiscing elit. Fusce augue nunc, laoreet a augue vel, placerat laoreet est. Morbi placerat dui nec nisl semper, sit amet rutrum mi imperdiet.</div>
+                            <div class="cat-item-price">$12.00</div>
+                        </div>
+                    </div>
+                    <div class="cat-item">
+                        
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="clear"></div>
+    </body>
+</html>
