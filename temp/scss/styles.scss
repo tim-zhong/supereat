@@ -39,16 +39,26 @@ $dark-dark-navy: #222634;
 	-o-border-radius:$radius;
 	border-radius:$radius;	
 }
-
-/*------------general------------*/
+@mixin box-shadow(){
+	-webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/*====================================================  Shared CSS ==================================================*/
 body{
-	background: $dark-navy;
+	background: #f2f2f4;
 	margin: 0;
 	position: relative;
 	height: 100%;
 }
 *{
 	font-family: sans-serif;
+}
+a, a:link, a:visited, a:hover{
+	color:#333333;
+	text-decoration: none;
 }
 .cwidth{
 	width: 1200px;
@@ -59,7 +69,7 @@ body{
 }
 .button{
 	display: inline-block;
-	padding: 10px 15px;
+	padding: 8px 25px;
 	font-weight: 300;
 	-webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
 	-moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
@@ -83,6 +93,133 @@ body{
 }
 /*------------hearder------------*/
 #header{
+	@include box-shadow();
+	background: #ffffff;
+	position: relative;
+	padding: 10px 40px;
+	
+	#logo img{
+		float:left;
+		width:40px;
+		display:inline-block;
+	}
+
+	#header-links{
+		text-transform: uppercase;
+		font-size:16px;
+		float: right;
+		a{
+			padding-top:10px;
+			display: inline-block;
+			margin:0 20px;
+		}
+		a:hover{
+			cursor: pointer;
+			border-bottom: 2px solid $orange;
+		}
+	}
+}
+
+/*----------- footer -------------*/
+
+#footer{
+	border-top:1px solid $dark-dark-navy;
+	color:#ffffff;
+	background: $dark-navy;
+	padding:40px 0;
+
+	.social-icon{
+		margin: 0 5px;
+	}
+	.social-icon:hover{
+		cursor: pointer;
+		color:#ffffff;
+	}
+	ul{
+		padding-left:20px;
+	}
+}
+
+.footer-col{
+	@include box-sizing();
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	float:left;
+	width:33.3%;
+	padding: 20px;
+}
+
+.footer-col-inner{
+	border-top:2px solid $navy;
+}
+
+.footer-col-header{
+	margin:20px 0;
+}
+
+.footer-col-content{
+	font-weight: 300;
+	color:#aaaaac;
+}
+/*------------ model --------------*/
+.modal-container, .modal-container-show{
+	display: inline-block;
+	position:fixed;
+	width:100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	top:0;
+	left:0;
+	z-index:2;
+	visibility: hidden;
+
+	.modal{
+		top:10px;
+		opacity: 0;
+	}
+}
+
+.modal-container-show{
+	visibility: visible;
+
+	.modal{
+		top:0px;
+		opacity: 1;
+	}
+}
+
+.modal-inner-container{
+	text-align: center;
+	width: 100%;
+	@include vertical-center();
+}
+
+.modal{
+	position: relative;
+	@include box-sizing();
+	min-width: 300px;
+	width:50%;
+	margin:0 auto;
+	background: #ffffff;
+	@include border-radius($border-radius);
+	padding: 30px;
+	text-align: center;
+	-webkit-transition: all 400ms ease-out;
+	-moz-transition: all 400ms ease-out;
+	-ms-transition: all 400ms ease-out;
+	transition: all 400ms ease-out;
+}
+
+/*--------------- media query -----------*/
+@media only screen and (max-width: 1200px) {
+	.cwidth{
+		width:100%;
+	}
+}
+/*====================================================  index page ==================================================*/
+#welcome-header{
 	position: absolute;
 	top:0;
 	left:0;
@@ -112,19 +249,19 @@ body{
 		color:#ffffff;
 	}
 }
-#logo{
+#welcome-logo{
 	float: left;
 	display: inline-block;
 	padding: 20px 30px;
 	/*text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);*/
 	cursor:pointer;
 }
-#logo img{
+#welcome-logo img{
 
 	width: 100px;
 }
 .menuitem{
-	font-size: 18px;
+	font-size: 16px;
 	float: right;
 	display: inline-block;
 	margin: 20px 20px;
@@ -188,52 +325,13 @@ body{
 	border:1px solid $dark-orange;
 	position: relative;
 	margin:-1px -5px 0;
-	top:-1px;
+	/*top:-1px;*/
 	margin:0 -5px;
 	width:68%;
 }
 
-
-/*----------- footer -------------*/
-
-#footer{
-	border-top:1px solid $dark-dark-navy;
-	color:#ffffff;
-	background: $dark-navy;
-	padding:40px 0;
-
-	.social-icon{
-		margin: 0 5px;
-	}
-	.social-icon:hover{
-		cursor: pointer;
-	}
-	ul{
-		padding-left:20px;
-	}
-}
-
-.footer-col{
-	@include box-sizing();
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-ms-box-sizing:border-box;
-	box-sizing:border-box;
-	float:left;
-	width:33.3%;
-	padding: 20px;
-}
-
-.footer-col-inner{
-	border-top:2px solid $navy;
-}
-
-.footer-col-content{
-	font-weight: 300;
-	opacity: 0.4;
-}
-
 #location-preview{
+	@include border-radius($border-radius);
 	height: 400px;
 	margin-bottom: 10px;
 }
@@ -241,64 +339,187 @@ body{
 #location-preview-value{
 	display: none;
 }
-
-/*------------ model --------------*/
-.modal-container, .modal-container-show{
-	display: inline-block;
-	position:fixed;
-	width:100%;
-	height: 100%;
-	background: rgba(0,0,0,0.7);
-	top:0;
-	left:0;
-	z-index:2;
-	visibility: hidden;
-
-	.modal{
-		top:10px;
-		opacity: 0;
-	}
+/*====================================================  menu page ===================================================*/
+#banner{
+    background: url(../assets/fake-restaurant.jpg) #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-background-position: center center;
+    -moz-background-position: center center;
+    -ms-background-position: center center;
+    -o-background-position: center center;
+    background-position: center center;
+    height: 364px;
 }
-
-.modal-container-show{
-	visibility: visible;
-
-	.modal{
-		top:0px;
-		opacity: 1;
-	}
+#banner-content{
+    background: #f2f2f4;
+    float: left;
+    padding: 24px;
+    margin:32px;
+    margin-left: 20px;
+    @include box-shadow();
+}	
+#banner-title{
+    height: 164px;
+    font-size: 36px;
+    line-height: 44px;
 }
-
-.modal-inner-container{
-	text-align: center;
-	width: 100%;
-	@include vertical-center();
+#menu-tool-bar-container, #menu-content{
+    @include box-sizing();
+    float: left;
+    padding: 0 20px 20px;
 }
-
-.modal{
-	position: relative;
-	@include box-sizing();
-	min-width: 300px;
-	width:50%;
-	margin:0 auto;
+#menu-tool-bar-container{
+    margin-top:130px;
+    width: 33.3%;
+}
+#menu-tool-bar{
+	@include box-shadow();
+	padding:30px;
 	background: #ffffff;
-	@include border-radius($border-radius);
-	padding: 30px;
-	text-align: center;
-	-webkit-transition: all 400ms ease-out;
-	-moz-transition: all 400ms ease-out;
-	-ms-transition: all 400ms ease-out;
-	transition: all 400ms ease-out;
+}
+#time{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #C0C0C0;
+    line-height: 32px;
+    
+}
+.subsection-link{
+	-webkit-transition: color 250ms;
+	-moz-transition: color 250ms;
+	-ms-transition: color 250ms;
+	-o-transition: color 250ms;
+	transition: color 250ms;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+.subsection-link:hover{
+	color: $orange;
+}
+#menu-content{
+    margin-top:30px;
+    width: 66.6%;
+    padding-top: 0;   
+}
+#cat-title{
+    padding: 30px;
+    color: #494949;
+    height: 100px;
+    line-height: 1;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+}
+.cat-item{
+    height:180px;
+    position: relative;
+    background: #FFFFFF;
+    margin-bottom: 15px;
+}
+.cat-item:hover{
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	@include box-shadow();
+	cursor: pointer;
+}
+.cat-item-content{
+    padding: 20px;
+    padding-right:200px;
+    @include box-sizing();
+    font-size:16px;
+}
+.cat-item-thumb{
+    position: absolute;
+    top:0;
+    right:0;
+}
+.cat-item-title{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.cat-item-description{
+    color: #717171;
+    font-weight: 300;
+    font-size: 16px;
+}
+.cat-item-price{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.cat-item-text-only .menu-item-content{
+    padding-right:20px;
+}
+/*==================================================== list.html page ===================================================*/
+.mid-dot-seperator{
+    padding: 0 5px;
 }
 
-/*--------------- media query -----------*/
-@media only screen and (max-width: 1200px) {
-	.cwidth{
-		width:100%;
-	}
+#res-content{
+	margin-top:60px;
+	@include box-sizing();
+    background: #ffffff;
+    padding:60px 30px;
 }
-@media only screen and (max-width: 1200px) {
-	.cwidth{
-		width:100%;
-	}
+
+#res-content-title{
+	font-size:40px;
+    padding: 0 30px 50px;
+}
+
+.res-card{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:10px;
+    width:33.33%;
+    float: left;
+}
+
+.res-card-inner{
+    padding: 20px;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    -ms-transition: all 250ms;
+    transition: all 250ms;
+}
+
+.res-card-inner:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.res-img{
+    background-image: url(../assets/fake-restaurant.jpg);
+    height:240px;
+    margin-bottom: 10px;
+    -webkit-background-position:center center;
+    -moz-background-position:center center;
+    -o-background-position:center center;
+    background-position:center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.res-title{
+    margin-bottom: 10px;
+    line-height: 1;
+    font-weight: 600;
+    font-size:18px;
+}
+.res-info{
+    color:#939393;
+}
+.res-dist{
+    text-transform: uppercase;
 }

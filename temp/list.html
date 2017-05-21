@@ -4,93 +4,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title></title>
-        
-        <style>
-            .clear{
-                clear:both;
-            }
-
-            .cwidth{
-                width:1100px;
-                margin:0 auto;
-                position:relative;
-            }
-
-            .mid-dot-seperator{
-                padding: 0 5px;
-            }
-            
-            body{
-                background: #f1f1f1;
-            }
-
-            #res-content{
-                background: #ffffff;
-                padding:60px 30px;
-            }
-
-            #res-content-title{
-                padding: 0 30px;
-            }
-
-            .res-card{
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -ms-box-sizing: border-box;
-                box-sizing: border-box;
-                padding:10px;
-                width:33.33%;
-                float: left;
-            }
-
-            .res-card-inner{
-                padding: 20px;
-                -webkit-transition: all 250ms;
-                -moz-transition: all 250ms;
-                -ms-transition: all 250ms;
-                transition: all 250ms;
-            }
-            
-            .res-card-inner:hover{
-                cursor: pointer;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            }
-
-            .res-img{
-                background-image: url(http://placehold.it/400x250);
-                height:240px;
-                margin-bottom: 10px;
-                -webkit-background-position:center center;
-                -moz-background-position:center center;
-                -o-background-position:center center;
-                background-position:center center;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-            }
-            .res-title{
-                margin-bottom: 10px;
-                line-height: 1;
-                font-weight: 600;
-                font-size:20px;
-            }
-            .res-info{
-                color:#939393;
-            }
-            .res-dist{
-                text-transform: uppercase;
-            }
-
-        </style>
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
+        <div id="header">
+            <div id="logo">
+                <a href="./">
+                    <img src="http://placehold.it/180x180?text=Logo">
+                </a>
+            </div>
+            <div id="header-links">
+                <a href="./">home</a>
+                <a href="#">Sign IN</a>
+                <a href="#">Register</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+
         <div id="content">
             <div id="res-content" class="cwidth">
                 <div id="res-content-title">
-                    <h1>Restaurants</h1>
+                    Restaurants
                 </div>
 
                 <div id="res-list">
@@ -161,6 +97,51 @@
                     </div>
                     <div class="clear"></div>
                 </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="cwidth">
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 1
+                        </div>
+                        <div class="footer-col-content">
+                            <ul>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 2
+                        </div>
+                        <div class="footer-col-content">
+                            <i class="social-icon fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+                            <i class="social-icon fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            <i class="social-icon fa fa-weixin fa-lg" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 3
+                        </div>
+                        <div class="footer-col-content">
+                            <p>
+                                Pri quas audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
     </body>
