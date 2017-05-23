@@ -163,7 +163,7 @@
                 -moz-border-radius: 2px 0 0 2px;
                 -o-border-radius: 2px 0 0 2px;
                 border-radius: 2px 0 0 2px;
-
+                box-shadow: none;
             }
             #delivery-location{
                 -webkit-box-sizing:border-box;
@@ -290,12 +290,15 @@
                 margin-left: 50px;
 
             }
+            #bill-wrapper{
+                border-top: 1px solid #404649;
+                border-bottom: 1px solid #404649;
+            }
             #bill{
                 font-size: 20px;
                 margin-left: 50px;
                 padding: 10px 0;
-                border-top: 1px solid #404649;
-                border-bottom: 1px solid #404649;
+                
             }
             .bill-title{
                 color: #333745;
@@ -389,22 +392,24 @@
                 <div class="clear"></div>
             </div>
             <input id="note" class="delivery-blank" type="text" name="username" placeholder="Add restaurant instructions">
-            <div id="bill">
-                <div id="subtotal">
-                    <span class="bill-title">Subtotal</span>
-                    <span class="bill-number">$12.00</span>
-                </div>
-                <div id="tax">
-                    <span class="bill-title">Tax</span>
-                    <span class="bill-number">$1.00</span>
-                </div>
-                <div id="booking-fee">
-                    <span class="bill-title">Booking fee</span>
-                    <span class="bill-number">$1.00</span>
-                </div>
-                <div id="total">
-                    <span id="total-title" class="bill-title">Total</span>
-                    <span id="total-number" class="bill-number">$14.00</span>
+            <div id="bill-wrapper">
+                <div id="bill">
+                    <div id="subtotal">
+                        <span class="bill-title">Subtotal</span>
+                        <span class="bill-number">$12.00</span>
+                    </div>
+                    <div id="tax">
+                        <span class="bill-title">Tax</span>
+                        <span class="bill-number">$1.00</span>
+                    </div>
+                    <div id="booking-fee">
+                        <span class="bill-title">Booking fee</span>
+                        <span class="bill-number">$1.00</span>
+                    </div>
+                    <div id="total">
+                        <span id="total-title" class="bill-title">Total</span>
+                        <span id="total-number" class="bill-number">$14.00</span>
+                    </div>
                 </div>
             </div>
             <div id="promotion">
