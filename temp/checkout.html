@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title></title>
+        
+        <style>
+            .clear{
+                clear:both;
+            }
+
+            .cwidth{
+                width:1100px;
+                margin:0 auto;
+                position:relative;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 10px 15px;
+                font-weight: 300;
+                -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                -ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                color:#ffffff;
+                background: #FE5F55;
+                -webkit-transition: background 250ms;
+                -moz-transition: background 250ms;
+                -o-transition: background 250ms;
+                transition: background 250ms;                
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -o-user-select:none;
+                user-select:none;
+            }
+
+            .button:hover {
+              cursor: pointer;
+              background: #ED4E44; }
+
+            body{
+                background: #f2f2f4;
+            }
+            .blank{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                outline: none;
+                font-size: 16px;
+                padding: 15px 16px;
+                border:1px solid #939393;
+                position: relative;
+                top:-1px;
+                margin:0px -5px;
+                width: 40%;
+                max-width: 500px;
+                min-width: 300px;
+                font-weight: 400;
+                margin-bottom: 30px;
+            }
+            .bottom-blank{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                outline: none;
+                font-size: 16px;
+                padding: 15px 16px;
+                border:1px solid #939393;
+                position: relative;
+                top:-1px;
+                margin:0 -5px;
+                width: 40%;
+                max-width: 500px;
+                min-width: 300px;
+                font-weight: 400;
+            }
+            
+            
+            #register{
+                text-align:center;
+                margin-top: 100px;
+                font-size: 32px;
+                font-weight: 300;
+            }
+            #register-title{
+                letter-spacing: 1px;
+            }
+            #register-signin-link{
+                font-size:14px;
+                margin-top: 40px;
+                font-weight: 400;
+                cursor: pointer;
+            }
+            #register-button{
+                margin: 5px auto;
+                padding: 8px 25px;
+                font-size: 16px;
+            }
+            .button{
+                -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                -ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+                color:#ffffff;
+                background: $orange;
+                -webkit-transition: background 250ms;
+                -moz-transition: background 250ms;
+                -o-transition: background 250ms;
+                transition: background 250ms;
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                -o-user-select:none;
+                user-select:none;
+            }
+            .button:hover{
+                cursor: pointer;
+                background: $dark-orange;
+            }
+            /*---------------------new css---------------------*/
+            #delivery{
+                margin-top: 160px;
+                margin-left: 50px;
+                background: #FFFFFF;
+                width: 30%;
+            }
+            #delivery-title{
+                font-size: 30px;
+                font-weight: 300;
+
+            }
+            #delivery-location-auto{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                box-sizing:border-box;
+                font-size: 20px;
+                padding: 12px 16px;
+                border:1px solid #ED4E44;
+                -webkit-border-radius: 2px 0 0 2px;
+                -moz-border-radius: 2px 0 0 2px;
+                -o-border-radius: 2px 0 0 2px;
+                border-radius: 2px 0 0 2px;
+
+            }
+            #delivery-location{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                outline: none;
+                
+                font-size: 16px;
+                padding: 15px 20px;
+                border:1px solid #ED4E44;
+                position: relative;
+                margin:0 -5px;
+                width:70%;
+            }
+            #order{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="delivery">
+                <div id="delivery-title">Delivery Info</div>
+                <div>
+                    <span id="delivery-location-auto" class="button"><i class="fa fa-crosshairs" aria-hidden="true"></i></span>
+                    <input id="delivery-location" type="text" class="" placeholder="Street">
+                </div>
+                    
+                <br>
+                <input class="blank" type="text" name="username" placeholder="Username">
+                <br>
+                <div id="delivery-"></div>
+                <div id=""></div>
+        </div>
+        <div id="order"></div>
+        <div class="clear"></div>
+    </body>
+</html>
