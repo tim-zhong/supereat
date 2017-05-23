@@ -68,6 +68,7 @@ a, a:link, a:visited, a:hover{
 	clear: both;
 }
 .button{
+	font-size: 16px;
 	display: inline-block;
 	padding: 8px 25px;
 	font-weight: 300;
@@ -476,10 +477,7 @@ a, a:link, a:visited, a:hover{
 }
 
 .res-card{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+    @include box-sizing();
     padding:10px;
     width:33.33%;
     float: left;
@@ -523,3 +521,50 @@ a, a:link, a:visited, a:hover{
 .res-dist{
     text-transform: uppercase;
 }
+
+/*==================================================== signin.html / register.html pages ===================================================*/
+.form{
+    text-align:center;
+    margin: 100px 0;
+    font-size: 32px;
+    font-weight: 300;
+}
+.form-title{
+    letter-spacing: 1px;
+}
+
+.form-input{
+    @include box-sizing();
+    outline: none;
+    font-size: 16px;
+    padding: 15px 16px;
+    border:1px solid #939393;
+    position: relative;
+    top:-1px;
+    width:40%;
+    max-width: 500px;
+    min-width: 300px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#signin-form #password{
+	margin-bottom: 0;
+}
+
+#signin-register-link{
+    font-size:14px;
+    margin-top: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    color:#45749e;
+}
+#signin-register-link:visited{
+	color:#23527c;
+}
+.form-submit-button{
+	@include border-radius($border-radius);
+    margin: 5px auto;
+}
+
+
