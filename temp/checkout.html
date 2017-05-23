@@ -111,7 +111,7 @@
                 -ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
                 box-shadow:2px 2px 5px rgba(0,0,0,0.2);
                 color:#ffffff;
-                background: $orange;
+                background: #FE5F55;
                 -webkit-transition: background 250ms;
                 -moz-transition: background 250ms;
                 -o-transition: background 250ms;
@@ -123,14 +123,27 @@
             }
             .button:hover{
                 cursor: pointer;
-                background: $dark-orange;
+                background: #ED4E44;
             }
             /*---------------------new css---------------------*/
-            #delivery{
+            #delivery, #order{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                box-sizing:border-box;
+                float: left;
                 margin-top: 160px;
                 margin-left: 50px;
                 background: #FFFFFF;
+            }
+            #delivery{
                 width: 30%;
+                max-width: 350px;
+                min-width: 300px;
+            }
+            .delivery-item{
+                padding: 15px 20px;
             }
             #delivery-title{
                 font-size: 30px;
@@ -141,9 +154,10 @@
                 -webkit-box-sizing:border-box;
                 -moz-box-sizing:border-box;
                 -ms-box-sizing:border-box;
+                -o-box-sizing:border-box;
                 box-sizing:border-box;
-                font-size: 20px;
-                padding: 12px 16px;
+                font-size: 16px;
+                padding: 14px 17px 17px 17px;
                 border:1px solid #ED4E44;
                 -webkit-border-radius: 2px 0 0 2px;
                 -moz-border-radius: 2px 0 0 2px;
@@ -158,34 +172,248 @@
                 -o-box-sizing:border-box;
                 box-sizing:border-box;
                 outline: none;
-                
                 font-size: 16px;
-                padding: 15px 20px;
+                padding: 15px 20px 15px 20px;
                 border:1px solid #ED4E44;
                 position: relative;
-                margin:0 -5px;
-                width:70%;
+                margin: 0 -5px;
+                width:75%;
+            }
+            .delivery-icon{
+                font-size: 16px;
+                padding: 16px 16px; 
+                color: #ED4E44;
+                line-height: 32px;
+            }
+            .delivery-blank{
+                outline: none;
+                border: none;
+                font-size: 16px;
+                font-weight: 300;
+                padding: 10px 10px;
+                width:75%;
+            }
+            #Payment-title{
+                font-size: 30px;
+                font-weight: 300;
+
+            }
+            #payment-dropdown{
+                margin: 5px auto;
+                padding-left: 20px;
+                padding-right: 50px;
+                font-size: 16px;
+                color: #333745;
+                width:75%;
+                border:1px solid #ED4E44;
+                border-radius: 0;
             }
             #order{
                 float: right;
+                margin-top: 60px;
+                margin-left: 100px;
+                width:450px;
+            }
+            #restaurant{
+                background-image: url(assets/fake-restaurant.jpg);
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -ms-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                -webkit-background-position: center center;
+                -moz-background-position: center center;
+                -ms-background-position: center center;
+                -o-background-position: center center;
+                background-position: center center;
+                padding: 32px;
+                height: 364px;
+                position:relative;
+            }
+            #restaurant-title{
+                background: #FFFFFF;
+                left: 0;
+                bottom: 0;
+                padding: 10px 20px;
+                height: 100px;
+                font-size: 36px;
+                line-height: 44px;
+                position: absolute;
+            }
+            #placeorder{
+                margin: 5px auto;
+                margin: 20px;
+                box-shadow: none;
+                font-size: 20px;
+            }
+            #food{
+                margin: 10px auto;
+                height: 100px;
+            }
+            #food:hover{
+                background: #F8F8F9;
+            }
+            #food-quantity{
+                float:left;
+                height: 30px;
+                margin-left: 15px;
+                margin-top: 20px;
+                border:1px solid #FE5F55;
+                padding: 0 0 0 10px;
+            }
+            #food-name{
+                float:left;
+                margin-left: 15px;
+                max-width: 200px;
+                font-size: 20px;
+                margin-top: 20px;
+                height: 100px;
+            }
+            #food-price{
+                float:left;
+                font-size: 16px;
+                font-weight: 300;
+                margin-left: 15px;
+                margin-top: 20px;
+                height: 100px;
+            }
+            #food-cancle{
+                float:left;
+                margin-top: 20px;
+                margin-left: 50px;
+                height: 100px;
+                cursor: pointer;
+            }
+            #note{
+                border: 1px solid #FE5F55;
+                margin: 10px auto;
+                margin-left: 50px;
+
+            }
+            #bill{
+                font-size: 20px;
+                margin-left: 50px;
+                padding: 10px 0;
+                border-top: 1px solid #404649;
+                border-bottom: 1px solid #404649;
+            }
+            .bill-title{
+                color: #333745;
+                font-weight: 300;
+            }
+            .bill-number{
+                float: right;
+                margin-right: 30px;
+                font-weight: 300;
+            }            
+            #subtotal{
+
+            }
+            #tax{
+
+            }
+            #booking-fee{
+
+            }
+            #total{
+                margin-top: 60px;
+                font-size: 30px;
+                
+            }
+            #total-title, #total-number{
+                font-weight: 400;
+            }
+            #promotion{
+                height: 200px;
+            }
+            #promotion-code{
+                margin: 30px 20px 30px 50px;
+                font-size: 16px;
+                border: 1px solid #FE5F55;
+                font-weight: 300;
+                padding: 10px 10px;
+                width:50%;
+            }
+            #promotion-button{
+                font-size: 18px;
             }
         </style>
     </head>
     <body>
         <div id="delivery">
-                <div id="delivery-title">Delivery Info</div>
-                <div>
-                    <span id="delivery-location-auto" class="button"><i class="fa fa-crosshairs" aria-hidden="true"></i></span>
-                    <input id="delivery-location" type="text" class="" placeholder="Street">
+            <div id="delivery-title" class="delivery-item">Delivery Info</div>
+            <div class="delivery-item">
+                <span id="delivery-location-auto" class="button">
+                    <i class="fa fa-crosshairs" aria-hidden="true"></i>
+                </span>
+                <input id="delivery-location" type="text" placeholder="Street">
+            </div>                
+
+            <div class="delivery-item">
+                <span class="glyphicon glyphicon-home delivery-icon"></span>
+                <input class="delivery-blank" type="text" name="username" placeholder="Apartment / Suite / Floor...">
+            </div>            
+
+            <div class="delivery-item">
+                <span class="glyphicon glyphicon-file delivery-icon"></span>
+                <input class="delivery-blank" type="text" name="username" placeholder="Add delivery note...">
+            </div>
+
+            <div id="Payment" class="delivery-item">
+                <div id="Payment-title">Payment Info</div>
+                <div  class="dropdown">
+                    <button id="payment-dropdown" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Card#1 ************0000
+                        <span class="caret" id="patment-caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">Card#1 ************0000</a></li>
+                    <li><a href="#">Add another card</a></li>
+                  </ul>
                 </div>
+            </div>
                     
-                <br>
-                <input class="blank" type="text" name="username" placeholder="Username">
-                <br>
-                <div id="delivery-"></div>
-                <div id=""></div>
         </div>
-        <div id="order"></div>
+        <div id="order">
+            <div id="restaurant">
+                <div id="restaurant-title">Restaurant's Name</div>
+            </div>
+            <div id="placeorder" class="button">
+                Place order <span class="glyphicon glyphicon-arrow-right"></span>
+            </div>
+            <div id="food">
+                <input id="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                <div id="food-name">Lorem ipsum dolor sit amet</div>
+                <div id="food-price">$12.00</div>
+                <div id="food-cancle"><span  class="glyphicon glyphicon-remove"></span></div>
+                <div class="clear"></div>
+            </div>
+            <input id="note" class="delivery-blank" type="text" name="username" placeholder="Add restaurant instructions">
+            <div id="bill">
+                <div id="subtotal">
+                    <span class="bill-title">Subtotal</span>
+                    <span class="bill-number">$12.00</span>
+                </div>
+                <div id="tax">
+                    <span class="bill-title">Tax</span>
+                    <span class="bill-number">$1.00</span>
+                </div>
+                <div id="booking-fee">
+                    <span class="bill-title">Booking fee</span>
+                    <span class="bill-number">$1.00</span>
+                </div>
+                <div id="total">
+                    <span id="total-title" class="bill-title">Total</span>
+                    <span id="total-number" class="bill-number">$14.00</span>
+                </div>
+            </div>
+            <div id="promotion">
+                <input id="promotion-code" type="text" name="username" placeholder="Promotion code">
+                <span id="promotion-button" class="button">APPLY</span>
+            </div>
+        </div>
         <div class="clear"></div>
+    <script src="js/jquery-3.2.1.min"></script>
+    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
