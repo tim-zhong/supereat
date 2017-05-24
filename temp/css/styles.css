@@ -552,4 +552,242 @@ a, a:link, a:visited, a:hover {
   border-radius: 2px;
   margin: 5px auto; }
 
+/*==================================================== chechout.html ===================================================*/
+#delivery, #order {
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-top: 160px;
+  margin-left: 50px;
+  background: #FFFFFF; }
+
+#delivery {
+  width: 30%;
+  max-width: 350px;
+  min-width: 300px; }
+
+.delivery-item {
+  padding: 15px 30px; }
+
+#delivery-title {
+  font-size: 30px;
+  font-weight: 300; }
+
+#delivery-location-auto {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 5px 7px;
+  border: 1px solid #ED4E44;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  box-shadow: none; }
+
+.delivery-input-field {
+  border: none;
+  width: 204px;
+  outline: none;
+  transition: opacity 250ms;
+  opacity: 0.5; }
+
+.delivery-input-field:focus {
+  opacity: 1;
+  border-bottom: 1px solid red; }
+
+.delivery-icon {
+  font-size: 16px;
+  color: #ED4E44;
+  line-height: 32px; }
+
+#payment-title {
+  padding: 0px 20px 15px 0;
+  font-size: 30px;
+  font-weight: 300; }
+
+#payment-dropdown {
+  margin: 5px auto;
+  padding-left: 5px;
+  font-size: 16px;
+  color: #333745;
+  border: 1px solid #ED4E44;
+  border-radius: 0; }
+
+#order {
+  float: right;
+  margin-top: 0px;
+  margin-left: 100px;
+  width: 450px; }
+
+#restaurant {
+  background-image: url(../assets/fake-restaurant.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: center center;
+  -moz-background-position: center center;
+  -ms-background-position: center center;
+  -o-background-position: center center;
+  background-position: center center;
+  padding: 32px;
+  height: 364px;
+  position: relative; }
+
+#restaurant-title {
+  background: #FFFFFF;
+  left: 0;
+  bottom: 0;
+  padding: 30px 30px 10px;
+  height: 100px;
+  font-size: 36px;
+  line-height: 44px;
+  position: absolute; }
+
+#placeorder {
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-left: 30px;
+  font-size: 20px; }
+
+#food {
+  position: relative;
+  height: 100px; }
+
+#food:hover {
+  background: #F8F8F9; }
+
+#food-quantity {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  float: left;
+  height: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  background: #dedede;
+  border: none;
+  padding: 0 0 0 10px; }
+
+#food-name {
+  float: left;
+  margin-left: 15px;
+  max-width: 200px;
+  font-size: 20px;
+  margin-top: 20px;
+  height: 100px; }
+
+#food-price {
+  float: left;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 15px;
+  margin-top: 20px;
+  height: 100px; }
+
+#food-cancel {
+  position: absolute;
+  float: left;
+  top: 20px;
+  right: 20px;
+  height: 100px;
+  cursor: pointer; }
+
+#note-container {
+  margin: 0 30px; }
+
+#note {
+  outline: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  margin: 10px auto;
+  width: 100%;
+  background: #F8F8F9; }
+
+#bill-wrapper {
+  padding-top: 20px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede; }
+
+#bill {
+  font-size: 16px;
+  margin-left: 30px;
+  padding: 10px 0; }
+
+.bill-title {
+  color: #333745;
+  font-weight: 300; }
+
+.bill-number {
+  float: right;
+  margin-right: 30px;
+  font-weight: 300; }
+
+#total {
+  margin-top: 20px;
+  font-size: 30px; }
+
+#total-title, #total-number {
+  font-weight: 400; }
+
+#promotion {
+  height: 200px; }
+
+#promotion-code {
+  outline: none;
+  margin: 30px 20px 30px 30px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px 15px;
+  background: #F8F8F9;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border: none;
+  width: 50%; }
+
+#payment-methods {
+  height: 40px; }
+
+#cards select {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
+
+#placeorder, #promotion-button {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 16px; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -6,365 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <title></title>
         
         <style>
-            .clear{
-                clear:both;
-            }
-
-            .cwidth{
-                width:1100px;
-                margin:0 auto;
-                position:relative;
-            }
-
-            .button {
-                display: inline-block;
-                padding: 10px 15px;
-                font-weight: 300;
-                -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                -ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                color:#ffffff;
-                background: #FE5F55;
-                -webkit-transition: background 250ms;
-                -moz-transition: background 250ms;
-                -o-transition: background 250ms;
-                transition: background 250ms;                
-                -webkit-user-select:none;
-                -moz-user-select:none;
-                -o-user-select:none;
-                user-select:none;
-            }
-
-            .button:hover {
-              cursor: pointer;
-              background: #ED4E44; }
-
-            body{
-                background: #f2f2f4;
-            }
-            .blank{
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -ms-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                outline: none;
-                font-size: 16px;
-                padding: 15px 16px;
-                border:1px solid #939393;
-                position: relative;
-                top:-1px;
-                margin:0px -5px;
-                width: 40%;
-                max-width: 500px;
-                min-width: 300px;
-                font-weight: 400;
-                margin-bottom: 30px;
-            }
-            .bottom-blank{
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -ms-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                outline: none;
-                font-size: 16px;
-                padding: 15px 16px;
-                border:1px solid #939393;
-                position: relative;
-                top:-1px;
-                margin:0 -5px;
-                width: 40%;
-                max-width: 500px;
-                min-width: 300px;
-                font-weight: 400;
-            }
-            
-            
-            #register{
-                text-align:center;
-                margin-top: 100px;
-                font-size: 32px;
-                font-weight: 300;
-            }
-            #register-title{
-                letter-spacing: 1px;
-            }
-            #register-signin-link{
-                font-size:14px;
-                margin-top: 40px;
-                font-weight: 400;
-                cursor: pointer;
-            }
-            #register-button{
-                margin: 5px auto;
-                padding: 8px 25px;
-                font-size: 16px;
-            }
-            .button{
-                -webkit-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                -moz-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                -ms-box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                box-shadow:2px 2px 5px rgba(0,0,0,0.2);
-                color:#ffffff;
-                background: #FE5F55;
-                -webkit-transition: background 250ms;
-                -moz-transition: background 250ms;
-                -o-transition: background 250ms;
-                transition: background 250ms;
-                -webkit-user-select:none;
-                -moz-user-select:none;
-                -o-user-select:none;
-                user-select:none;
-            }
-            .button:hover{
-                cursor: pointer;
-                background: #ED4E44;
-            }
-            /*---------------------new css---------------------*/
-            #delivery, #order{
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -ms-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                float: left;
-                margin-top: 160px;
-                margin-left: 50px;
-                background: #FFFFFF;
-            }
-            #delivery{
-                width: 30%;
-                max-width: 350px;
-                min-width: 300px;
-            }
-            .delivery-item{
-                padding: 15px 20px;
-            }
-            #delivery-title{
-                font-size: 30px;
-                font-weight: 300;
-
-            }
-            #delivery-location-auto{
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -ms-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                font-size: 16px;
-                padding: 14px 17px 17px 17px;
-                border:1px solid #ED4E44;
-                -webkit-border-radius: 2px 0 0 2px;
-                -moz-border-radius: 2px 0 0 2px;
-                -o-border-radius: 2px 0 0 2px;
-                border-radius: 2px 0 0 2px;
-                box-shadow: none;
-            }
-            #delivery-location{
-                -webkit-box-sizing:border-box;
-                -moz-box-sizing:border-box;
-                -ms-box-sizing:border-box;
-                -o-box-sizing:border-box;
-                box-sizing:border-box;
-                outline: none;
-                font-size: 16px;
-                padding: 15px 20px 15px 20px;
-                border:1px solid #ED4E44;
-                position: relative;
-                margin: 0 -5px;
-                width:75%;
-            }
-            .delivery-icon{
-                font-size: 16px;
-                padding: 16px 16px; 
-                color: #ED4E44;
-                line-height: 32px;
-            }
-            .delivery-blank{
-                outline: none;
-                border: none;
-                font-size: 16px;
-                font-weight: 300;
-                padding: 10px 10px;
-                width:75%;
-            }
-            #Payment-title{
-                font-size: 30px;
-                font-weight: 300;
-
-            }
-            #payment-dropdown{
-                margin: 5px auto;
-                padding-left: 20px;
-                padding-right: 50px;
-                font-size: 16px;
-                color: #333745;
-                width:75%;
-                border:1px solid #ED4E44;
-                border-radius: 0;
-            }
-            #order{
-                float: right;
-                margin-top: 60px;
-                margin-left: 100px;
-                width:450px;
-            }
-            #restaurant{
-                background-image: url(assets/fake-restaurant.jpg);
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -ms-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-                -webkit-background-position: center center;
-                -moz-background-position: center center;
-                -ms-background-position: center center;
-                -o-background-position: center center;
-                background-position: center center;
-                padding: 32px;
-                height: 364px;
-                position:relative;
-            }
-            #restaurant-title{
-                background: #FFFFFF;
-                left: 0;
-                bottom: 0;
-                padding: 10px 20px;
-                height: 100px;
-                font-size: 36px;
-                line-height: 44px;
-                position: absolute;
-            }
-            #placeorder{
-                margin: 5px auto;
-                margin: 20px;
-                box-shadow: none;
-                font-size: 20px;
-            }
-            #food{
-                margin: 10px auto;
-                height: 100px;
-            }
-            #food:hover{
-                background: #F8F8F9;
-            }
-            #food-quantity{
-                float:left;
-                height: 30px;
-                margin-left: 15px;
-                margin-top: 20px;
-                border:1px solid #FE5F55;
-                padding: 0 0 0 10px;
-            }
-            #food-name{
-                float:left;
-                margin-left: 15px;
-                max-width: 200px;
-                font-size: 20px;
-                margin-top: 20px;
-                height: 100px;
-            }
-            #food-price{
-                float:left;
-                font-size: 16px;
-                font-weight: 300;
-                margin-left: 15px;
-                margin-top: 20px;
-                height: 100px;
-            }
-            #food-cancle{
-                float:left;
-                margin-top: 20px;
-                margin-left: 50px;
-                height: 100px;
-                cursor: pointer;
-            }
-            #note{
-                border: 1px solid #FE5F55;
-                margin: 10px auto;
-                margin-left: 50px;
-
-            }
-            #bill-wrapper{
-                border-top: 1px solid #404649;
-                border-bottom: 1px solid #404649;
-            }
-            #bill{
-                font-size: 20px;
-                margin-left: 50px;
-                padding: 10px 0;
-                
-            }
-            .bill-title{
-                color: #333745;
-                font-weight: 300;
-            }
-            .bill-number{
-                float: right;
-                margin-right: 30px;
-                font-weight: 300;
-            }            
-            #total{
-                margin-top: 60px;
-                font-size: 30px;
-                
-            }
-            #total-title, #total-number{
-                font-weight: 400;
-            }
-            #promotion{
-                height: 200px;
-            }
-            #promotion-code{
-                margin: 30px 20px 30px 50px;
-                font-size: 16px;
-                border: 1px solid #FE5F55;
-                font-weight: 300;
-                padding: 10px 10px;
-                width:50%;
-            }
-            #promotion-button{
-                font-size: 18px;
-            }
         </style>
     </head>
     <body>
         <div id="delivery">
             <div id="delivery-title" class="delivery-item">Delivery Info</div>
+
             <div class="delivery-item">
-                <span id="delivery-location-auto" class="button">
-                    <i class="fa fa-crosshairs" aria-hidden="true"></i>
-                </span>
-                <input id="delivery-location" type="text" placeholder="Street">
-            </div>                
+                <span class="glyphicon glyphicon-screenshot delivery-icon"></span>
+                <input id="delivery-location" class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
+            </div>            
 
             <div class="delivery-item">
                 <span class="glyphicon glyphicon-home delivery-icon"></span>
-                <input class="delivery-blank" type="text" name="username" placeholder="Apartment / Suite / Floor...">
+                <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
             </div>            
 
             <div class="delivery-item">
                 <span class="glyphicon glyphicon-file delivery-icon"></span>
-                <input class="delivery-blank" type="text" name="username" placeholder="Add delivery note...">
+                <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Add delivery note...">
             </div>
 
-            <div id="Payment" class="delivery-item">
-                <div id="Payment-title">Payment Info</div>
-                <div  class="dropdown">
-                    <button id="payment-dropdown" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Card#1 ************0000
-                        <span class="caret" id="patment-caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="#">Card#1 ************0000</a></li>
-                    <li><a href="#">Add another card</a></li>
-                  </ul>
+            <div id="payment" class="delivery-item">
+                <div id="payment-title">Payment Info</div>
+                <div id="cards" class="form-group">
+                    <label for="sel1">Select Card:</label>
+                    <select class="form-control" id="sel1">
+                        <option>Credit Card 11283918208y01820</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                  </select>
                 </div>
+                <img id="payment-methods" src="./assets/payment-methods.png">
             </div>
                     
         </div>
@@ -373,16 +51,18 @@
                 <div id="restaurant-title">Restaurant's Name</div>
             </div>
             <div id="placeorder" class="button">
-                Place order <span class="glyphicon glyphicon-arrow-right"></span>
+                Place order
             </div>
             <div id="food">
                 <input id="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
                 <div id="food-name">Lorem ipsum dolor sit amet</div>
                 <div id="food-price">$12.00</div>
-                <div id="food-cancle"><span  class="glyphicon glyphicon-remove"></span></div>
+                <div id="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
                 <div class="clear"></div>
             </div>
-            <input id="note" class="delivery-blank" type="text" name="username" placeholder="Add restaurant instructions">
+            <div id="note-container">
+                <textarea id="note" placeholder="Add restaurant instructions"></textarea>
+            </div>
             <div id="bill-wrapper">
                 <div id="bill">
                     <div id="subtotal">
