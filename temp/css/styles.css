@@ -172,6 +172,9 @@ a, a:link, a:visited, a:hover {
 @media only screen and (max-width: 1200px) {
   .cwidth {
     width: 100%; } }
+@media only screen and (max-width: 600px) {
+  .nwidth {
+    width: 100%; } }
 /*====================================================  index page ==================================================*/
 #welcome-header {
   position: absolute;
