@@ -60,9 +60,16 @@ a, a:link, a:visited, a:hover{
 	color:#333333;
 	text-decoration: none;
 }
+.highlight{
+	color:$orange;
+}
 .cwidth{
 	width: 1200px;
 	margin:0 auto; /*center*/
+}
+.nwidth {
+    width: 600px;
+    margin: 0 auto;
 }
 .clear{
 	clear: both;
@@ -198,6 +205,7 @@ a, a:link, a:visited, a:hover{
 }
 
 .modal{
+	display: block !important;
 	position: relative;
 	@include box-sizing();
 	min-width: 300px;
@@ -218,6 +226,11 @@ a, a:link, a:visited, a:hover{
 	.cwidth{
 		width:100%;
 	}
+}
+@media only screen and (max-width: 600px) {
+	.nwidth {
+    	width: 100%; 
+	} 
 }
 /*====================================================  index page ==================================================*/
 #welcome-header{
@@ -340,7 +353,7 @@ a, a:link, a:visited, a:hover{
 #location-preview-value{
 	display: none;
 }
-/*====================================================  menu page ===================================================*/
+/*====================================================  menu.html ===================================================*/
 #banner{
     background: url(../assets/fake-restaurant.jpg) #ffffff;
     -webkit-background-size: cover;
@@ -458,6 +471,20 @@ a, a:link, a:visited, a:hover{
 }
 .cat-item-text-only .menu-item-content{
     padding-right:20px;
+}
+#menu-options{
+	text-align:left;
+	margin-bottom: 10px;
+}
+#menu-options-title{
+	font-size:20px;
+	text-align: center;
+}
+.menu-options-item{
+	margin: 20px 0;
+}
+.menu-options-item-title{
+	margin-bottom: 10px;
 }
 /*==================================================== list.html page ===================================================*/
 .mid-dot-seperator{
@@ -793,4 +820,35 @@ a, a:link, a:visited, a:hover{
 	left: 0;
 	background: #000000;
 	z-index:-1;
+}
+
+/*==================================================== about.html ===================================================*/
+#about{
+	margin:100px auto 160px;
+}
+#about-title{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+#about-content{
+    margin: 20px 50px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/*==================================================== policy.html ===================================================*/
+#policy{
+	margin:100px auto 160px;
+}
+ #policy-title{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+#policy-content{
+    margin: 20px 50px;
 }

@@ -1,8 +1,8 @@
 var toolbar = document.getElementById("menu-tool-bar");
 var toolbarWidth = toolbar.offsetWidth;
 var toolbarScrollTop = toolbar.offsetTop;
+var catItems = document.getElementsByClassName("cat-item")
 
-console.log(toolbarScrollTop);
 window.onscroll = stickyToolbar;
 
 var sublinks = document.getElementsByClassName("subsection-link");
@@ -55,4 +55,49 @@ function scrolltosection(id,relct){
 	for(var i=1; i<=frames;i++){
 		settop(a+step*i,i);
 	}
+}
+
+menuOptionsContainer = document.getElementById("menu-options-container");
+menuOptions = document.getElementById('menu-options');
+menuOptionsInnerContainer = document.getElementById("menu-options-inner-container");
+menuOptionsConfirm = document.getElementById("menu-options-confirm");
+
+menuOptionsContainer.addEventListener("click",closemenuOptionsModal);
+
+// Note: replace this with an AJAX call to populate the options
+function openMenuOptions(menuId, itemId){
+	// $.ajax({
+ //        url: "someurl",
+ //        type: 'post',
+ //        dataType: 'json',
+ //        data: {menuid:menuId, itemId:itemId},
+ //        success: function(response) {
+ //            console.log(response);
+ //            if(response[0].status = 'success') {
+ //                console.log('success',response[0]);
+ //                $('#menu-options').html(response[0].data);
+ //                showmenuOptionsModal();
+ //            } else {
+ //                console.log('success-error',response[0].data);
+ //            }
+ //        },
+ //        error: function(xhr, status, msg){
+ //            console.log('Error:'+status,msg);
+ //        }
+ //    });
+
+ // Replace what's below with what's above
+	showmenuOptionsModal();
+};
+
+function showmenuOptionsModal(){
+    document.getElementById("menu-options-container").className = 'modal-container-show';
+}
+
+function closemenuOptionsModal(event){
+    if(event.target != menuOptionsContainer &&
+        event.target != menuOptionsInnerContainer) return;
+
+    event.stopPropagation();
+    document.getElementById("menu-options-container").className = 'modal-container';
 }
