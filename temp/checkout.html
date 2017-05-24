@@ -13,83 +13,149 @@
         </style>
     </head>
     <body>
-        <div id="delivery">
-            <div id="delivery-title" class="delivery-item">Delivery Info</div>
-
-            <div class="delivery-item">
-                <span class="glyphicon glyphicon-screenshot delivery-icon"></span>
-                <input id="delivery-location" class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
-            </div>            
-
-            <div class="delivery-item">
-                <span class="glyphicon glyphicon-home delivery-icon"></span>
-                <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
-            </div>            
-
-            <div class="delivery-item">
-                <span class="glyphicon glyphicon-file delivery-icon"></span>
-                <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Add delivery note...">
+        <div id="header">
+            <div id="logo">
+                <a href="./">
+                    <img src="http://placehold.it/180x180?text=Logo">
+                </a>
             </div>
-
-            <div id="payment" class="delivery-item">
-                <div id="payment-title">Payment Info</div>
-                <div id="cards" class="form-group">
-                    <label for="sel1">Select Card:</label>
-                    <select class="form-control" id="sel1">
-                        <option>Credit Card 11283918208y01820</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                  </select>
-                </div>
-                <img id="payment-methods" src="./assets/payment-methods.png">
+            <div id="header-links">
+                <a href="./">home</a>
+                <a href="#">Sign IN</a>
+                <a href="#">Register</a>
             </div>
-                    
+            <div class="clear"></div>
         </div>
-        <div id="order">
-            <div id="restaurant">
-                <div id="restaurant-title">Restaurant's Name</div>
+        <div id="content">
+            <div id="bg-map">
             </div>
-            <div id="placeorder" class="button">
-                Place order
+            <div id="delivery">
+                <div id="delivery-title" class="delivery-item">Delivery Info</div>
+
+                <div class="delivery-item">
+                    <span class="glyphicon glyphicon-screenshot delivery-icon"></span>
+                    <input id="delivery-location" class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
+                </div>            
+
+                <div class="delivery-item">
+                    <span class="glyphicon glyphicon-home delivery-icon"></span>
+                    <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Apartment / Suite / Floor...">
+                </div>            
+
+                <div class="delivery-item">
+                    <span class="glyphicon glyphicon-file delivery-icon"></span>
+                    <input class="input-filed delivery-input-field" type="text" name="username" placeholder="Add delivery note...">
+                </div>
+
+                <div id="payment" class="delivery-item">
+                    <div id="payment-title">Payment Info</div>
+                    <div id="cards" class="form-group">
+                        <label for="sel1">Select Card:</label>
+                        <select class="form-control" id="sel1">
+                            <option>Credit Card 11283918208y01820</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                      </select>
+                    </div>
+                    <img id="payment-methods" src="./assets/payment-methods.png">
+                </div>
+                        
             </div>
-            <div id="food">
-                <input id="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
-                <div id="food-name">Lorem ipsum dolor sit amet</div>
-                <div id="food-price">$12.00</div>
-                <div id="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+            <div id="order">
+                <div id="restaurant">
+                    <div id="restaurant-title">Restaurant's Name</div>
+                </div>
+                <div id="placeorder" class="button">
+                    Place order
+                </div>
+                <div id="food">
+                    <input id="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                    <div id="food-name">Lorem ipsum dolor sit amet</div>
+                    <div id="food-price">$12.00</div>
+                    <div id="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+                    <div class="clear"></div>
+                </div>
+                <div id="note-container">
+                    <textarea id="note" placeholder="Add restaurant instructions"></textarea>
+                </div>
+                <div id="bill-wrapper">
+                    <div id="bill">
+                        <div id="subtotal">
+                            <span class="bill-title">Subtotal</span>
+                            <span class="bill-number">$12.00</span>
+                        </div>
+                        <div id="tax">
+                            <span class="bill-title">Tax</span>
+                            <span class="bill-number">$1.00</span>
+                        </div>
+                        <div id="booking-fee">
+                            <span class="bill-title">Booking fee</span>
+                            <span class="bill-number">$1.00</span>
+                        </div>
+                        <div id="total">
+                            <span id="total-title" class="bill-title">Total</span>
+                            <span id="total-number" class="bill-number">$14.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="promotion">
+                    <input id="promotion-code" type="text" name="username" placeholder="Promotion code">
+                    <span id="promotion-button" class="button">APPLY</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+        <div id="footer">
+            <div class="cwidth">
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 1
+                        </div>
+                        <div class="footer-col-content">
+                            <ul>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                                <li>simple list item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 2
+                        </div>
+                        <div class="footer-col-content">
+                            <i class="social-icon fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+                            <i class="social-icon fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            <i class="social-icon fa fa-weixin fa-lg" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-inner">
+                        <div class="footer-col-header">
+                            Footer Column 3
+                        </div>
+                        <div class="footer-col-content">
+                            <p>
+                                Pri quas audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="clear"></div>
             </div>
-            <div id="note-container">
-                <textarea id="note" placeholder="Add restaurant instructions"></textarea>
-            </div>
-            <div id="bill-wrapper">
-                <div id="bill">
-                    <div id="subtotal">
-                        <span class="bill-title">Subtotal</span>
-                        <span class="bill-number">$12.00</span>
-                    </div>
-                    <div id="tax">
-                        <span class="bill-title">Tax</span>
-                        <span class="bill-number">$1.00</span>
-                    </div>
-                    <div id="booking-fee">
-                        <span class="bill-title">Booking fee</span>
-                        <span class="bill-number">$1.00</span>
-                    </div>
-                    <div id="total">
-                        <span id="total-title" class="bill-title">Total</span>
-                        <span id="total-number" class="bill-number">$14.00</span>
-                    </div>
-                </div>
-            </div>
-            <div id="promotion">
-                <input id="promotion-code" type="text" name="username" placeholder="Promotion code">
-                <span id="promotion-button" class="button">APPLY</span>
-            </div>
         </div>
-        <div class="clear"></div>
-    <script src="js/jquery-3.2.1.min"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/jquery-3.2.1.min"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ9becLveavTVuvcR1jrhTOxagQz9KlQo"></script>
+        <script src="js/map-styles.js"></script>
+        <script src="js/checkout.js"></script>
     </body>
 </html>
