@@ -4,6 +4,14 @@ var locationBtn = document.getElementById("location")
     locationPreviewInnerContainer = document.getElementById("location-preview-inner-container");
     locationPreviewConfirm = document.getElementById("location-preview-confirm");
 
+var searchAddress = document.getElementById("search-address");
+var searchLat = document.getElementById("search-lat");
+var searchLng = document.getElementById("search-lng");
+
+var autocomplete;
+var autoAddress,
+    autoLat,
+    autoLng;
 
 
 function tryAPIGeolocation() { //Warning: coordinates are not accurate
@@ -53,7 +61,9 @@ function closeLocationPreviewModal(event){
 
     event.stopPropagation();
     document.getElementById("location-preview-container").className = 'modal-container';
-    document.getElementById("location-preview-value").value = "";
+    searchAddress.value = "";
+    searchLat.value = "";
+    searchLng.value = "";
 }
 
 function initLocationPreview(position) {
@@ -83,7 +93,9 @@ function geocodeLatLng(geocoder, map, infowindow, position) {
                     map: map
                 });
                 infowindow.setContent(results[1].formatted_address);
-                document.getElementById("location-preview-value").value = results[1].formatted_address;
+                autoAddress = results[1].formatted_address;
+                autoLat = latlng.lat;
+                autoLng = latlng.lng;
                 infowindow.open(map, marker);
             } else {
                 window.alert('No results found');
@@ -94,13 +106,35 @@ function geocodeLatLng(geocoder, map, infowindow, position) {
     });
  }
 
+ function initAutocomplete() {
+    var addressField = document.getElementById("search-keyword");
+    var autoCompleteOptions = {
+        types: ['geocode'],
+        componentRestrictions: {country: "ca"}
+    };
+    autocomplete = new google.maps.places.Autocomplete(addressField, autoCompleteOptions);
+
+    // When the user selects an address from the dropdown, populate the address
+    // fields in the form.
+    autocomplete.addListener('place_changed', function() {setValues();});
+}
+
+function setValues() {
+    place = autocomplete.getPlace();
+    searchLat.value = place.geometry.location.lat();
+    searchLng.value = place.geometry.location.lng();
+    searchAddress.value = document.getElementById("search-keyword").value;
+}
+
 locationBtn.addEventListener("click", showLocationPreviewModal);
 locationPreviewContainer.addEventListener("click",closeLocationPreviewModal);
 locationPreviewConfirm.addEventListener("click",function(event){
-    formatted_address = document.getElementById("location-preview-value").value;
-    document.getElementById("search-keyword").value = formatted_address;
+    searchAddress.value = autoAddress;
+    searchLat.value = autoLat;
+    searchLng.value = autoLng;
+
+    document.getElementById("search-keyword").value = autoAddress;
     closeLocationPreviewModal(event);
 });
 
-// Improve performance by reploading the map
-getUserLocation();
+initAutocomplete();

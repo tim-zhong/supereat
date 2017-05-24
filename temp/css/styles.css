@@ -309,7 +309,7 @@ a, a:link, a:visited, a:hover {
   height: 400px;
   margin-bottom: 10px; }
 
-#location-preview-value {
+#search-address, #search-lat, #search-lng {
   display: none; }
 
 /*====================================================  menu.html ===================================================*/
