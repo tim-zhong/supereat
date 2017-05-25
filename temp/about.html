@@ -21,9 +21,34 @@
                 <a href="./" class="animsition-link">home</a>
                 <a href="signin.html" class="animsition-link">Sign IN</a>
                 <a href="register.html" class="animsition-link">Register</a>
-                <a href="checkout.html" class="animsition-link">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                <a href="checkout.html" class="animsition-link" id="cart">
+                    <span class="glyphicon glyphicon-shopping-cart cart"></span>
                 </a>
+                <div id="cart-hover" class="cart-hover-hide">
+                    <div class="cart-hover-item">
+                        <div class="food">
+                            <input class="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                            <div class="food-name">Lorem ipsum dolor sit amet</div>
+                            <div class="food-price">$12.00</div>
+                            <div class="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="food">
+                            <input class="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                            <div class="food-name">Lorem ipsum dolor sit amet</div>
+                            <div class="food-price">$12.00</div>
+                            <div class="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="cart-hover-bill">
+                        <div class="cart-hover-subtotal">
+                            <span class="cart-hover-subtotal-title">Subtotal</span>
+                            <span class="cart-hover-subtotal-number">$12.00</span>
+                        </div>
+                        <div class="cart-hover-checkout button">Checkout</div>
+                    </div>
+                </div>
             </div>
             <div class="clear"></div>
         </div>
