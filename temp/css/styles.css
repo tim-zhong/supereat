@@ -84,9 +84,9 @@ a, a:link, a:visited, a:hover {
 
 /*----------- footer -------------*/
 #footer {
-  border-top: 1px solid #222634;
+  border-top: 1px solid #111123;
   color: #ffffff;
-  background: #333745;
+  background: #222234;
   padding: 40px 0; }
   #footer .social-icon {
     margin: 0 5px; }
@@ -183,6 +183,32 @@ a, a:link, a:visited, a:hover {
 @media only screen and (max-width: 600px) {
   .nwidth {
     width: 100%; } }
+@media only screen and (max-width: 520px) {
+  #header #header-links a {
+    margin: 0 10px; }
+
+  .footer-col {
+    float: none;
+    width: 100%; }
+
+  .footer-col-inner {
+    padding-left: 30px; } }
+@media only screen and (max-width: 440px) {
+  #logo, #header-links {
+    display: inline-block;
+    width: 100%;
+    text-align: center; }
+
+  #header #header-links a:hover {
+    border: none;
+    color: #FE5F55; }
+
+  #header #logo img {
+    float: none !important; }
+
+  #header #header-links a {
+    font-size: 16px;
+    margin: 0 3px; } }
 /*====================================================  index page ==================================================*/
 #welcome-header {
   position: absolute;
@@ -312,6 +338,53 @@ a, a:link, a:visited, a:hover {
 #search-address, #search-lat, #search-lng {
   display: none; }
 
+/*---------- Google auto complete ----------*/
+.pac-logo:after {
+  display: none; }
+
+.pac-item {
+  padding: 2px 4px;
+  border-top: 1px solid #FE5F55; }
+
+.pac-container {
+  border: 1px solid #FE5F55; }
+
+.pac-matched {
+  color: #FE5F55; }
+
+/*---------- media queries ----------*/
+@media only screen and (max-width: 600px) {
+  #search-bar-container h1 {
+    font-size: 30px; }
+
+  #search-bar {
+    width: 100%; }
+
+  #search {
+    display: block;
+    width: 50%;
+    min-width: 200px;
+    margin: 20px auto 0; }
+
+  #search-keyword {
+    padding: 10px 20px 10px 10px;
+    font-size: 18px; }
+
+  #location {
+    padding: 9px 12px; }
+
+  #location, #search {
+    font-size: 18px;
+    padding: 10px 12px; } }
+@media only screen and (max-width: 450px) {
+  #welcome-logo img {
+    width: 60px; }
+
+  #welcome-logo {
+    padding: 20px 10px; }
+
+  .menuitem {
+    margin: 20px 5px; } }
 /*====================================================  menu.html ===================================================*/
 #banner {
   background: url(../assets/fake-restaurant.jpg) #ffffff;
@@ -528,6 +601,16 @@ a, a:link, a:visited, a:hover {
 .res-dist {
   text-transform: uppercase; }
 
+@media screen and (max-width: 850px) {
+  .res-card {
+    width: 50%; } }
+@media screen and (max-width: 520px) {
+  .res-card {
+    float: none;
+    width: 100%; } }
+@media screen and (max-width: 320px) {
+  .res-card {
+    padding: 0; } }
 /*==================================================== signin.html / register.html pages ===================================================*/
 .form {
   text-align: center;
