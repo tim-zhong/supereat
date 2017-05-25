@@ -582,6 +582,75 @@ a, a:link, a:visited, a:hover{
 .menu-options-item-title{
 	margin-bottom: 10px;
 }
+.cat-item-description{
+    max-height: 60px;
+    overflow: hidden;
+}
+.cat-item-description{
+    box-shadow: 0 10px 10px rgba(255,255,255,0.1) inset;
+}
+@media screen and (max-width: 1024px){
+    #menu-tool-bar-container{
+        padding: 0 20px 20px 20px;
+    }
+}
+@media screen and (max-width: 820px){
+    #menu-tool-bar-container{
+        display: none;
+    }
+    #menu-content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 520px){
+    
+    #banner-content{
+        padding: 24px;                    
+        height: 150px;
+        width: 90%;
+        margin: 0 auto 32px;
+        float: none;
+    }
+    #banner{
+        padding-top: 200px;
+    }
+    #banner-title{
+        height: 100px;
+        text-align: center;
+    }
+    #cat-title {
+      padding: 30px;
+      color: #494949;
+      height: 100px;
+      line-height: 1;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .cat-item-price{
+        bottom: 10px;
+    }
+    .cat-item-thumb img{
+        width: 100px;
+        height: 100px;
+    }
+    .cat-item-content{
+        padding-right: 120px;
+    }
+    .cat-item-description{
+        display: none
+    }
+    .cat-item{
+        height: 100px;
+    }
+    .cat-item-title{
+        font-size: 14px;
+    }
+    #banner-title{
+        font-size: 24px;
+    }
+}
 /*==================================================== list.html page ===================================================*/
 .mid-dot-seperator{
     padding: 0 5px;
