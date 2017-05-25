@@ -22,3 +22,29 @@ $(document).ready(function() {
     transition: function(url){ window.location.href = url; }
   });
 });
+
+var cartIcon = document.getElementById('cart');
+var cartDropdown = document.getElementById('cart-hover');
+
+cartIcon.addEventListener('mouseover', showCartDropdown);
+cartIcon.addEventListener('mouseleave', hideCartDropdown);
+cartDropdown.addEventListener('mouseover', showCartDropdown);
+cartDropdown.addEventListener('mouseleave', hideCartDropdown);
+
+function showCartDropdown(){
+    if(cartDropdown.vanishing) clearTimeout(cartDropdown.vanishing);
+
+    if(!cartDropdown.showed){
+        cartDropdown.className = 'cart-hover-show';
+        cartDropdown.showed = true;
+    }
+}
+
+function hideCartDropdown(){
+    if(cartDropdown.showed){
+        cartDropdown.showed = false;
+        cartDropdown.vanishing = setTimeout(function(){
+            cartDropdown.className = 'cart-hover-hide';
+        },500);
+    }
+}
