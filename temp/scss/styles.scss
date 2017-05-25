@@ -238,9 +238,12 @@ a, a:link, a:visited, a:hover{
 }
 .cart-hover-hide{
     bottom:400px;
-    opacity: 0;
+    opacity: 1;
 }
 #cart-hover{
+	@include box-shadow();
+	text-transform: none;
+	font-size: 14px;
     z-index:-1;
     display: block !important;
     position: absolute;
@@ -270,11 +273,13 @@ a, a:link, a:visited, a:hover{
     border-bottom: 1px solid #f1f1f2;
 }
 .cart-hover-item{
-    height: 100px;
     margin: 0 auto;
 }
 .cart-hover-bill{
     background: #F8F8F9;
+}
+.cart-hover-subtotal{
+	padding-top: 20px;
 }
 .cart-hover-subtotal-title{
     margin-left: 30px;
@@ -290,6 +295,7 @@ a, a:link, a:visited, a:hover{
     width: 85%;
     text-align: center;
     margin-left: 30px;
+    margin-bottom: 30px;
 }
 /*--------------- media query -----------*/
 @media only screen and (max-width: 1200px) {
@@ -944,7 +950,6 @@ a, a:link, a:visited, a:hover{
 }
 .food{
 	position: relative;
-    height: 100px;
     background: #ffffff;
 }
 .food:hover{
@@ -966,8 +971,8 @@ a, a:link, a:visited, a:hover{
     max-width: 200px;
     font-size: 16px;
     margin-top: 20px;
-    height: 100px;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
 .food-price{
     float:left;
@@ -975,7 +980,6 @@ a, a:link, a:visited, a:hover{
     font-weight: 300;
     margin-left: 15px;
     margin-top: 20px;
-    height: 100px;
 }
 .food-cancel{
 	position: absolute;
@@ -1058,7 +1062,6 @@ a, a:link, a:visited, a:hover{
 	height: 130%;
 	top:-100px;
 	left: -60px;
-	background: #000000;
 	z-index:-1;
 }
 #placeorder-mobile{
