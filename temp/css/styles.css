@@ -58,7 +58,6 @@ a, a:link, a:visited, a:hover {
 
 /*------------hearder------------*/
 #header {
-  z-index: 2;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -849,15 +848,14 @@ a, a:link, a:visited, a:hover {
   margin-left: 30px;
   font-size: 20px; }
 
-.food {
+#food {
   position: relative;
-  height: 100px;
-  background: #ffffff; }
+  height: 100px; }
 
-.food:hover {
+#food:hover {
   background: #F8F8F9; }
 
-.food-quantity {
+#food-quantity {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -871,7 +869,7 @@ a, a:link, a:visited, a:hover {
   border: none;
   padding: 0 0 0 10px; }
 
-.food-name {
+#food-name {
   float: left;
   margin-left: 15px;
   max-width: 200px;
@@ -880,7 +878,7 @@ a, a:link, a:visited, a:hover {
   height: 100px;
   padding-right: 20px; }
 
-.food-price {
+#food-price {
   float: left;
   font-size: 16px;
   font-weight: 300;
@@ -888,7 +886,7 @@ a, a:link, a:visited, a:hover {
   margin-top: 20px;
   height: 100px; }
 
-.food-cancel {
+#food-cancel {
   position: absolute;
   float: left;
   top: 20px;
