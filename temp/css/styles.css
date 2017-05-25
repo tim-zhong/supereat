@@ -966,7 +966,7 @@ a, a:link, a:visited, a:hover {
   -o-box-shadow: none;
   box-shadow: none; }
 
-#placeorder, #promotion-button {
+#placeorder, #promotion-button, #placeorder-mobile {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -983,11 +983,20 @@ a, a:link, a:visited, a:hover {
   background: #000000;
   z-index: -1; }
 
+#placeorder-mobile {
+  width: 90%;
+  margin: 0 5% 20px;
+  text-align: center;
+  display: none; }
+
 @media screen and (max-width: 900px) {
   #delivery, #order {
     float: none;
     width: 80%;
     margin: 0 auto; }
+
+  #delivery {
+    margin-bottom: 60px; }
 
   #order {
     margin-top: 200px;
@@ -997,7 +1006,10 @@ a, a:link, a:visited, a:hover {
   #bg-map {
     top: -100px;
     left: 0;
-    height: 600px; } }
+    height: 600px; }
+
+  #placeorder-mobile {
+    display: inline-block; } }
 /*==================================================== about.html ===================================================*/
 #about {
   margin: 100px auto 160px; }
