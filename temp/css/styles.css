@@ -1008,7 +1008,10 @@ a, a:link, a:visited, a:hover {
     height: 600px; }
 
   #placeorder-mobile {
-    display: inline-block; } }
+    display: inline-block; }
+
+  #placeorder {
+    display: none; } }
 /*==================================================== about.html ===================================================*/
 #about {
   margin: 100px auto 160px; }

@@ -1007,7 +1007,7 @@ a, a:link, a:visited, a:hover{
 	text-align: center;
 	display: none;
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:900px) {	
 	#delivery, #order{
 		float:none;
 		width:80%;
@@ -1028,6 +1028,9 @@ a, a:link, a:visited, a:hover{
 	}
 	#placeorder-mobile{
 		display: inline-block;
+	}
+	#placeorder{
+		display: none;
 	}
 }
 /*==================================================== about.html ===================================================*/
