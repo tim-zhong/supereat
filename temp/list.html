@@ -9,6 +9,70 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/animsition.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <style>
+            #cart{
+                position: relative;
+            }
+            .cart-hover-show{
+                bottom:0;
+                opacity: 1;
+            }
+            .cart-hover-hide{
+                bottom:400px;
+                opacity: 0;
+            }
+            #cart-hover{
+                z-index:-1;
+                display: block !important;
+                position: absolute;
+                width: 320px;
+                margin-top: 0;
+                background: #FFFFFF;
+                -webkit-transition:all 400ms ease-in-out;
+                -moz-transition:all 400ms ease-in-out;
+                -ms-transition:all 400ms ease-in-out;
+                -o-transition:all 400ms ease-in-out;
+                transition:all 400ms ease-in-out;
+                right:20px;
+                -webkit-transform: translateY(100%);
+                -moz-transform: translateY(100%);
+                -ms-transform: translateY(100%);
+                -o-transform: translateY(100%);
+                transform: translateY(100%);
+            }
+            .cart-hover-item .food-price{
+                float:none;
+                height:auto;
+                position: absolute;
+                bottom:10px;
+                right:30px;
+            }
+            .cart-hover-item .food{
+                border-bottom: 1px solid #f1f1f2;
+            }
+            .cart-hover-item{
+                height: 100px;
+                margin: 0 auto;
+            }
+            .cart-hover-bill{
+                background: #F8F8F9;
+            }
+            .cart-hover-subtotal-title{
+                margin-left: 30px;
+                font-size: 20px;
+            }
+            .cart-hover-subtotal-number{
+                float: right;
+                margin-right: 30px;
+                font-size: 20px;
+            }
+            .cart-hover-checkout{
+                margin: 10px auto;
+                width: 85%;
+                text-align: center;
+                margin-left: 30px;
+            }
+        </style>
     </head>
     <body>
     <div class="animsition">
@@ -22,14 +86,41 @@
                 <a href="./" class="animsition-link">home</a>
                 <a href="signin.html" class="animsition-link">Sign IN</a>
                 <a href="register.html" class="animsition-link">Register</a>
-                <a href="checkout.html" class="animsition-link">
-                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                <a href="checkout.html" class="animsition-link" id="cart">
+                    <span class="glyphicon glyphicon-shopping-cart cart"></span>
                 </a>
+                <div id="cart-hover" class="cart-hover-hide">
+                    <div class="cart-hover-item">
+                        <div class="food">
+                            <input class="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                            <div class="food-name">Lorem ipsum dolor sit amet</div>
+                            <div class="food-price">$12.00</div>
+                            <div class="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="food">
+                            <input class="food-quantity" type="number" value="1" name="quantity" min="1" max="100">
+                            <div class="food-name">Lorem ipsum dolor sit amet</div>
+                            <div class="food-price">$12.00</div>
+                            <div class="food-cancel"><span  class="glyphicon glyphicon-remove"></span></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="cart-hover-bill">
+                        <div class="cart-hover-subtotal">
+                            <span class="cart-hover-subtotal-title">Subtotal</span>
+                            <span class="cart-hover-subtotal-number">$12.00</span>
+                        </div>
+                        <div class="cart-hover-checkout button">Checkout</div>
+                    </div>
+                </div>
             </div>
             <div class="clear"></div>
         </div>
 
+        
         <div id="content">
+            
             <div id="res-content" class="cwidth">
                 <div id="res-content-title">
                     Restaurants
