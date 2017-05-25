@@ -10,22 +10,24 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body style="background: #FFFFFF;">
+    <div class="animsition">
         <div id="header">
             <div id="logo">
-                <a href="./">
+                <a href="./" class="animsition-link">
                     <img src="http://placehold.it/180x180?text=Logo">
                 </a>
             </div>
             <div id="header-links">
-                <a href="./">home</a>
-                <a href="signin.html">Sign IN</a>
-                <a href="register.html">Register</a>
-                <a href="checkout.html">
+                <a href="./" class="animsition-link">home</a>
+                <a href="signin.html" class="animsition-link">Sign IN</a>
+                <a href="register.html" class="animsition-link">Register</a>
+                <a href="checkout.html" class="animsition-link">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                 </a>
             </div>
             <div class="clear"></div>
         </div>
+
         <div id="content">
             <div id="about" class="nwidth">
                 <div id="about-title">About Us</div>
@@ -87,5 +89,12 @@
                 <div class="clear"></div>
             </div>
         </div>
+    </div>
+    <script src="js/jquery-3.2.1.min"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ9becLveavTVuvcR1jrhTOxagQz9KlQo&libraries=places"></script>
+    <script src="js/map-styles.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>
