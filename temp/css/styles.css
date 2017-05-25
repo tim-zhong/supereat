@@ -84,6 +84,7 @@ a, a:link, a:visited, a:hover {
 
 /*----------- footer -------------*/
 #footer {
+  position: relative;
   border-top: 1px solid #111123;
   color: #ffffff;
   background: #222234;
@@ -119,6 +120,15 @@ a, a:link, a:visited, a:hover {
 .footer-col-content {
   font-weight: 300;
   color: #aaaaac; }
+
+.footer-bottom {
+  background: #111112;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: right;
+  width: 100%;
+  padding: 10px 30px; }
 
 /*------------ model --------------*/
 .modal-container, .modal-container-show {
@@ -194,6 +204,9 @@ a, a:link, a:visited, a:hover {
   .footer-col-inner {
     padding-left: 30px; } }
 @media only screen and (max-width: 440px) {
+  #header {
+    padding: 10px 20px; }
+
   #logo, #header-links {
     display: inline-block;
     width: 100%;
@@ -800,9 +813,10 @@ a, a:link, a:visited, a:hover {
   float: left;
   margin-left: 15px;
   max-width: 200px;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 20px;
-  height: 100px; }
+  height: 100px;
+  padding-right: 20px; }
 
 #food-price {
   float: left;
@@ -903,10 +917,25 @@ a, a:link, a:visited, a:hover {
   width: 100%;
   height: 130%;
   top: -100px;
-  left: 0;
+  left: -60px;
   background: #000000;
   z-index: -1; }
 
+@media screen and (max-width: 900px) {
+  #delivery, #order {
+    float: none;
+    width: 80%;
+    margin: 0 auto; }
+
+  #order {
+    margin-top: 200px;
+    margin-bottom: 30px;
+    width: 100%; }
+
+  #bg-map {
+    top: -100px;
+    left: 0;
+    height: 600px; } }
 /*==================================================== about.html ===================================================*/
 #about {
   margin: 100px auto 160px; }
