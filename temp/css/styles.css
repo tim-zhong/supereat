@@ -205,7 +205,6 @@ a, a:link, a:visited, a:hover {
   text-transform: none;
   font-size: 14px;
   z-index: -1;
-  display: block !important;
   position: absolute;
   width: 320px;
   margin-top: 0;
@@ -261,6 +260,9 @@ a, a:link, a:visited, a:hover {
 @media only screen and (max-width: 1200px) {
   .cwidth {
     width: 100%; } }
+@media only screen and (max-width: 820px) {
+  #cart-hover {
+    display: none; } }
 @media only screen and (max-width: 600px) {
   .nwidth {
     width: 100%; } }
