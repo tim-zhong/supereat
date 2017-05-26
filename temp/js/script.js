@@ -45,6 +45,6 @@ function hideCartDropdown(){
         cartDropdown.showed = false;
         cartDropdown.vanishing = setTimeout(function(){
             cartDropdown.className = 'cart-hover-hide';
-        },500);
+        },100);
     }
 }
