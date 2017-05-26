@@ -233,12 +233,12 @@ a, a:link, a:visited, a:hover{
 }
 /*--------------- cart -----------*/
 .cart-hover-show{
-    bottom:0;
+	visibility: visible;
     opacity: 1;
 }
 .cart-hover-hide{
-    bottom:400px;
-    opacity: 1;
+	visibility: hidden;
+    opacity: 0;
 }
 #cart-hover{
 	@include box-shadow();
@@ -248,6 +248,7 @@ a, a:link, a:visited, a:hover{
     position: absolute;
     width: 320px;
     margin-top: 0;
+    bottom: 0;
     background: #FFFFFF;
     -webkit-transition:all 400ms ease-in-out;
     -moz-transition:all 400ms ease-in-out;
