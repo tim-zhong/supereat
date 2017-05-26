@@ -15,10 +15,10 @@ $dark-dark-navy: #111123;
 }
 
 @mixin user-select(){
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;	
-	-o-user-select:none;
+	-webkiter-select:none;
+	-mozer-select:none;
+	-mser-select:none;	
+	-oer-select:none;
 	user-select:none;	
 }
 
@@ -45,6 +45,13 @@ $dark-dark-navy: #111123;
 	-ms-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 	-o-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+@mixin transform($t){
+	-webkit-transform: $t;
+	-moz-transform: $t;
+	-ms-transform: $t;
+	-o-transform: $t;
+	transform: $t;
 }
 /*====================================================  Shared CSS ==================================================*/
 body{
@@ -90,9 +97,9 @@ a, a:link, a:visited, a:hover{
 	-o-transition: background 250ms;
 	transition: background 250ms;
 	@include user-select();
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-o-user-select:none;
+	-webkiter-select:none;
+	-mozer-select:none;
+	-oer-select:none;
 	user-select:none;
 }
 .button:hover{
@@ -128,15 +135,99 @@ a, a:link, a:visited, a:hover{
 		}
 	}
 }
-
+#cart{
+	-webkit-transition:color 250ms;
+	-moz-transition:color 250ms;
+	-ms-transition:color 250ms;
+	-o-transition:color 250ms;
+	transition:color 250ms;
+	position: relative;
+}
+#cart-items-count{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    background: $orange;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    color:#ffffff;
+    text-align: center;
+    padding-top:-1px;
+    bottom:3px;
+    right:-15px;
+}
+@-webkit-keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-15px));
+  }
+	60% {
+    @include transform(translateY(-5px));
+  }
+}
+@-moz-keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-15px));
+  }
+	60% {
+    @include transform(translateY(-5px));
+  }
+}
+@-ms-keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-15px));
+  }
+	60% {
+    @include transform(translateY(-5px));
+  }
+}
+@-o-keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-15px));
+  }
+	60% {
+    @include transform(translateY(-5px));
+  }
+}
+@keyframes bounce{
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-15px));
+  }
+	60% {
+    @include transform(translateY(-5px));
+  }
+}
+.bounce {
+	color:$orange !important;
+	-webkit-animation: bounce 1s infinite;
+	-moz-animation: bounce 1s infinite;
+	-ms-animation: bounce 1s infinite;
+	-o-animation: bounce 1s infinite;
+	animation: bounce 1s infinite;
+}
 /*----------- footer -------------*/
 
 #footer{
 	position: relative;
 	border-top:1px solid $dark-dark-navy;
 	color:#ffffff;
-	background: $dark-navy;
-	padding:40px 0;
+	background: #111112;
+	padding:10px 0 20px;
 
 	.social-icon{
 		margin: 0 5px;
@@ -149,8 +240,14 @@ a, a:link, a:visited, a:hover{
 		padding-left:20px;
 	}
 }
-
+#footer-logo{
+	padding:20px;
+}
+#footer-logo img{
+	width:60px;
+}
 .footer-col{
+	border-top: 1px solid $navy;
 	@include box-sizing();
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -161,26 +258,24 @@ a, a:link, a:visited, a:hover{
 	padding: 20px;
 }
 
-.footer-col-inner{
-	border-top:2px solid $navy;
-}
-
 .footer-col-header{
-	margin:20px 0;
+	margin:0 0 20px;
+	font-size:14px;
 }
 
 .footer-col-content{
 	font-weight: 300;
 	color:#aaaaac;
+	font-size:12px;
 }
 .footer-bottom{
+	font-size:12px;
 	background: #111112;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	text-align: right;
+	text-align: center;
 	width:100%;
-	padding:10px 30px;
+	padding:20px 30px 0;
+	border-top:1px solid $navy;
+	font-weight: 300;
 }
 /*------------ model --------------*/
 .modal-container, .modal-container-show{
@@ -317,12 +412,24 @@ a, a:link, a:visited, a:hover{
 	#header #header-links a{
 		margin: 0 10px;
 	}
+	.footer-bottom{
+		width:80%;
+		margin: 0 auto;
+	}
+	#footer-logo{
+		width:80%;
+		margin: 0 auto;
+		border-bottom: 1px solid $navy;
+		padding-left:30px;
+	}
 	.footer-col{
+		border-top:none;
 		float: none;
-		width:100%;
+		width:80%;
+		margin: 0 auto;
 	}
 	.footer-col-inner{
-		padding-left: 30px;
+		padding-left: 10px;
 	}
 }
 
@@ -1153,4 +1260,78 @@ a, a:link, a:visited, a:hover{
 }
 #policy-content{
     margin: 20px 50px;
+}
+
+/*====================================================  contact.html ==================================================*/
+#contact-container{
+	background: #ffffff;
+	width:70%;
+	margin:120px auto;
+	padding:30px 40px 60px;
+	@include box-shadow();
+}
+
+#contact-title{
+	@include box-shadow();
+	width:200px;
+	background: $orange;
+	padding:20px 30px;
+	font-size:20px;
+	color:#ffffff;
+	margin:0 auto;
+	position: relative;
+	top:-60px;
+}
+
+
+#contact-content{
+	float:left;
+	width:50%;
+	padding:0 10px;
+}
+
+
+#contact-description{
+	margin-bottom: 10px;
+}
+
+#contact-map{
+	height:200px;
+	float:left;
+	width:45%;
+	margin-right:5%;
+}
+
+.contact-method{
+	margin:10px 0;
+}
+
+.contact-method i{
+	color:$orange;
+	margin-right:10px;
+}
+@media screen and (max-width: 800px){
+	#contact-container{
+		width:80%;
+	}
+    #contact-content,#contact-map{
+    	padding: none;
+    	float:none;
+    	width:90%;
+    	margin:0 auto;
+    }
+    #contact-map{
+    	position: relative;
+    	top:-30px;
+    }
+}
+@media screen and (max-width: 520px){
+	#contact-container{
+		width:90%;
+	}
+}
+@media screen and (max-width: 420px){
+	#contact-container{
+		width:100%;
+	}
 }

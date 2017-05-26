@@ -48,3 +48,12 @@ function hideCartDropdown(){
         },100);
     }
 }
+
+function bounceCart(n){
+    var n = n || 1;
+    var cart = document.getElementById("cart");
+    cart.className = "animsition-link bounce";
+    setTimeout(function(){
+        cart.className = "animsition-link";
+    }, n * 2000);
+}

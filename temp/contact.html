@@ -10,7 +10,7 @@
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
-    <body style="background: #FFFFFF;">
+    <body>
     <div class="animsition">
         <div id="header">
             <div id="logo">
@@ -24,6 +24,7 @@
                 <a href="register.html" class="animsition-link">Register</a>
                 <a href="checkout.html" class="animsition-link" id="cart">
                     <span class="glyphicon glyphicon-shopping-cart cart"></span>
+                    <div id="cart-items-count">3</div>
                 </a>
                 <div id="cart-hover" class="cart-hover-hide">
                     <div class="cart-hover-item">
@@ -55,20 +56,32 @@
         </div>
 
         <div id="content">
-            <div id="about" class="nwidth">
-                <div id="about-title">About Us</div>
-                <div id="about-content">
-                    <p>Aenean lorem libero, faucibus eu leo vel, faucibus maximus neque. Sed aliquam iaculis consequat. Praesent feugiat malesuada lorem, non cursus urna. Sed nec hendrerit ante, et tincidunt libero. Aliquam erat <span class="highlight">volutpat</span>. Duis porta lorem sed justo elementum posuere. Morbi sit amet neque malesuada, vulputate diam sed, blandit nibh.</p>
-                    <p>
-                        <ol>
-                            <li>Morbi vel neque a nulla condimentum porttitor.</li>
-                            <li>Quisque vestibulum magna vel lobortis sodales. Ut vitae diam tincidunt, bibendum sapien vitae, suscipit nibh.</li>
-                            <li>Vestibulum egestas, lacus nec accumsan luctus, est sapien commodo urna, vitae placerat lacus velit vel magna. Nam tempus turpis ac tortor aliquam, at condimentum nisl porta.</li>
-                        </ol>
-                    </p>
-                    <p>Morbi vel neque a nulla condimentum porttitor. Quisque vestibulum magna vel lobortis sodales. Ut vitae diam tincidunt, bibendum <span class="highlight">accumsan</span> vitae, suscipit nibh. Vestibulum egestas, lacus nec accumsan luctus, est sapien commodo urna, vitae placerat lacus velit vel magna. Nam tempus turpis ac tortor aliquam, at <span class="highlight">condimentum</span> nisl porta. Fusce at molestie mi. Fusce ultricies ante posuere mi laoreet, at convallis risus blandit. Nulla facilisi. Maecenas volutpat augue augue, a accumsan mi volutpat eu. Etiam ut laoreet odio, in dictum lorem.</p>
+            <div id="contact-container">
+                <div id="contact-title">
+                    Get In Touch!
                 </div>
-           </div>
+                <div id="contact-map">
+                </div>
+                <div id="contact-content">
+                    <div id="contact-info">
+                        <p id="contact-description"><span class="highlight">Lorem ipsum</span> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</p>
+                        <hr/>
+                        <div class="contact-method">
+                            <i class="fa fa-phone" aria-hidden="true"></i><a href="tel:1234567890"><span>123-456-7890</span></a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:john@example.com"><span>John@example.com</span></a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i><span>123 Test street west, City, ON A1B C2D</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
         </div>
 
         <div id="footer">
@@ -128,5 +141,6 @@
     <script src="js/map-styles.js"></script>
     <script src="js/animsition.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
     </body>
 </html>

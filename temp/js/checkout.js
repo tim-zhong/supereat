@@ -17,8 +17,6 @@ function initMap(position) {
     });
 }
 
-//initMap(43.4733031, -80.5332649);
-
 window.onscroll = function(){
     if(window.innerWidth > 900) return;
     
