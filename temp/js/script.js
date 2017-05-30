@@ -49,7 +49,7 @@ function hideCartDropdown(){
     }
 }
 
-function bounceCart(n){
+function bounceCart(n){//n: how many time the cart bounces
     var n = n || 1;
     var cart = document.getElementById("cart");
     cart.className = "animsition-link bounce";
